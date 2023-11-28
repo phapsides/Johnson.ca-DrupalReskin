@@ -1,0 +1,24 @@
+{
+  "vm": {
+    "ip": "192.168.44.44",
+    "memory": "1024",
+    "synced_folders": [],
+    "forwarded_ports": []
+  },
+  "vdd": {
+    "sites": {
+      "drupal7": {
+        "account_name": "root",
+        "account_pass": "root",
+        "account_mail": "box@example.com",
+        "site_name": "drupal7",
+        "site_mail": "box@example.com",
+        "vhost": {
+          "document_root": "drupal7",
+          "url": "drupal7.dev",
+          "alias": ["www.drupal7.dev"]
+        }
+      }
+    }
+  }
+}

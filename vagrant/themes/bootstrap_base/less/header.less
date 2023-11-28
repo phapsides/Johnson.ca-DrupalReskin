@@ -1,0 +1,385 @@
+/*
+  Header Elements
+*/
+
+#page-header {
+  font-family: @altFontFamily;
+  
+  // all header navs
+  .nav{
+    margin:0;
+    > li{
+      display:inline-block;
+      line-height:1.25em;
+    }
+    li a, li span.nolink, li span.locale-untranslated{
+      display:inline;
+      background:none;
+      margin-right:30px;
+      cursor:pointer;
+      &:hover{
+        background:none;
+      }
+    }
+    &.menu{
+      li a, li span.nolink{
+        margin-right:0;
+        margin-left:20px;
+      }
+    }
+    
+    // right utility menu
+    &.nav-tools{
+      > li{
+        position:relative;
+        
+        #rsabroker-region-selector{
+          > a{padding-left:18px;}
+          > a:before{
+            width: 0; 
+            height: 0; 
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid @purple;
+            position:absolute;
+            left:0;
+            top:10px;
+            margin-top:-3px;
+            content:'triangle';
+            text-indent:-9999px;
+          }
+        }
+        @media @mobile{
+          a{margin-right:10px;}
+        }
+        // specific due to a lack of structure consistency in each li
+        .dropdown-menu > li > a:before{display:none;}
+      }
+      .dropdown-menu{
+        left:-46%;
+      }
+    }
+    
+    // dropdown sub menus
+    .dropdown-menu{
+      border-radius:0;
+      left:-27px;
+      padding:0px 5px;
+      .box-shadow(none);
+      text-shadow:none;
+      min-width:120px; 
+      li {
+        border-bottom: 1px solid @grayLight;
+        text-align:center;
+        a{
+          font-size:@fontSizeSmall;
+          display:block;
+          margin:0;
+          padding:3px 5px;
+          @media only screen and (max-width: @navbarCollapseWidth){
+            text-align:left !important;
+            text-indent: 13%;
+          }
+          @media @mobile{
+            text-indent: 0;
+          }
+        }
+        
+        &.active a{
+          font-weight:bold;
+          text-decoration:underline;
+        }
+        &:last-child{
+          border:0;
+        }
+      }
+    }
+    
+    // remove drupal menus bug
+    .contextual-links-wrapper{
+      display:none;
+    }
+  }
+
+    // add top arrow to the ontario dropdown
+    #rsabroker-region-selector{
+      .dropdown-menu{
+        margin-top:4px;
+        &:before{
+          content: '';
+          display: inline-block;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid #ccc;
+          border-bottom-color: rgba(0,0,0,0.2);
+          position: absolute;
+          top: -7px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          height: 0;
+        }
+        &:after{
+          content: '';
+          display: inline-block;
+          border-left: 6px solid transparent;
+          border-right: 6px solid transparent;
+          border-bottom: 6px solid #fff;
+          position: absolute;
+          top: -6px;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          width: 0;
+          height: 0;
+        }
+      }
+    }
+  
+  // primary navigation
+  .navbar{
+    @media only screen and (max-width: @navbarCollapseWidth){
+      margin-top: 0; margin-bottom: 0;
+      width: 100%;
+      .btn-navbar{
+        margin-top: -50px !important;
+        @media @mobile{
+          margin-top: -20px !important;
+        }
+      }
+    }
+    @media @mobile{
+      width:100%;
+      margin-top:30px;
+      margin-bottom:0px;
+    }
+    .navbar-inner{
+      background:none;
+      border:0;
+      .box-shadow(none);
+      height:auto;
+      min-height:0;
+      padding:0;
+      li a, li a.active, li span.nolink{
+        .box-shadow(none);
+        //text-transform:uppercase;
+        text-shadow:none;
+        font-size:20px;
+        padding:0;
+        font-weight:normal;
+        color:@purple;
+        background:none;
+      }
+      .nav-collapse > ul > li{
+        position:relative;
+        &:before{
+          content:'|';
+          font-size:0;
+          background:@grayLighter;
+          border:0;
+          width:1px;
+          position:absolute;
+          left:10px;
+          height:15px;
+          top:2px;
+        }
+        &.first:before{
+          display:none;
+        }
+        &.last{
+          border-bottom:0;
+        }
+        .dropdown-menu{
+          z-index:@zindexDropdown;
+          border-radius:0; box-shadow:none;
+          padding:0 2%; width:128%;
+          margin-left:-14%;
+          &:before,
+          &:after{
+            left:0; right:0; margin:0 auto;
+            width:0; height:0;
+          }
+          > li{
+            display:block;
+            padding:10px 0 6px;
+            border-bottom:1px solid @grayLight;
+            &:last-child{
+              border-bottom:0;
+            }
+            a{
+              display:block;
+              width:100%;
+              text-decoration:none;
+              margin:0; text-align:center;
+              white-space:normal;
+            }
+          }
+          
+          @media @mobile{
+            width:100%;
+            margin-left:0;
+            border:0;
+            > li{
+              a{
+                text-align:left;
+                padding-left:30px;
+              }
+            }
+          }
+        }
+      }
+      @media only screen and (max-width:1160px){
+        div>ul>li{
+          margin-bottom:10px;
+        }
+        li:nth-child(4){
+        //  clear:left;
+        //  &:before{display:none;} // hide the vertical line
+        }
+      }
+      @media only screen and (max-width: @navbarCollapseWidth){
+        .nav-collapse, 
+        .nav-collapse.collapse{
+          height:0; overflow:hidden;
+          margin-top:25px;
+        }
+        .btn-navbar{
+          display:block;
+          border:none;
+          box-shadow:none;
+          border-radius:0;
+          background:none;
+          margin-top:-12px;
+          > span{
+            background:@purple;
+            height:5px; width:27px;
+            box-shadow:none;
+          }
+        }
+        .nav-collapse .open > .dropdown-menu{
+          display:block;
+        }
+        .nav-collapse{
+          li{
+            width:100%;
+            border-bottom:1px solid @grayLight;
+            text-align:center;
+            margin-bottom:0; padding:12px 0;
+            text-align:left;
+            &:before{display:none;}
+            > a, > span.nolink{
+              margin-left:25px;
+            }
+          }
+        }
+      }
+    }
+    .btn-navbar{
+      margin-top:-20px;
+    }
+
+  }
+  
+  // logo 
+  
+  .logo {
+    margin: 30px 0;
+    display: inline-block;
+    @media only screen and (max-width: @navbarCollapseWidth){
+      margin-bottom: 0;
+    }
+    @media @mobile{
+      margin:10px 0 0;
+      position:absolute;
+      left:20px;
+      background:url('../images/logo-mobile.png') left top no-repeat;
+      width:78px; height:40px;
+      > img{display:none;}
+    }
+  }
+  
+  // right top nav
+  #block-menu-block-platform-menus-3{
+    margin-right:30px;
+  }
+  
+  // search block
+  
+  #block-search-form{
+    position:relative;
+    overflow:hidden;
+    padding-top:5px;
+    margin-top:-5px;
+    .search-trigger, .search-reveal{
+      display:block;
+      line-height:1.25em;
+      float:left;
+      &.search-reveal{
+        .transition(0.3s);
+        margin-right:-210px;
+        margin-top:-3px;
+        .opacity(0);
+        &.open{
+          .transition(0.3s);
+          margin-right:0;
+          .opacity(100);
+          
+        }
+        form{
+          margin:0;
+        }
+        input.form-text{
+          border:1px solid @boxBorder;
+          background:@white;
+          .border-radius(0);
+          padding:2px 5px;
+          min-height:0;
+          font-size:@baseFontSize;
+          font-family:@altFontFamily;
+          width:160px !important;
+        }
+        .btn{
+          background:none;
+          border:none;
+          .box-shadow(none);
+        }
+        .input-append{
+          padding:0;
+        }
+      }
+    }
+  }
+  
+  // Background icon beside the search trigger.
+  .search-trigger{
+    background:url('../images/purple-magnifying-glass.png') left center no-repeat;
+    padding-left:24px;
+  }
+
+}
+
+  // Background icon beside the Find a RSA Contact.
+  #page-header .nav li a.ic-telephone,
+  .ic-telephone{
+    background:url('../images/purple-telephone-icon.png') left center no-repeat;
+    padding-left:31px;
+  }
+
+    // Caret to the left side of main menu 'RSA Products'
+    #page-header .navbar .navbar-inner .nav-collapse > ul > li.dropdown span:after{
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 5px solid @purple;
+      position:absolute;
+      left:0;
+      top:10px;
+      @media only screen and (max-width: @navbarCollapseWidth){
+        top: 22px;
+      }
+      margin-top:-3px;
+      content:'triangle';
+      text-indent:-9999px;
+    }

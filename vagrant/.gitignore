@@ -1,0 +1,23 @@
+# Ignore the sites modules
+modules/contrib
+modules/custom
+modules/features
+
+# Ignore paths that contain user-generated content.
+files
+
+# Ignore libraries paths
+libraries
+
+# Ignore settings.php
+settings.php
+
+# Ignore the Vagrant files
+.vagrant
+
+# Ignore data directory
+data
+
+#ignore settings.php and sites.php
+settings.php
+sites.php

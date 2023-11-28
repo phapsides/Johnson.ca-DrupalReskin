@@ -1,0 +1,27 @@
+// Media query variables.
+@mobile:  ~"(max-width: 767px)";
+@tablet:  ~"(min-width: 768px) and (max-width: 979px)";
+@normal:  ~"(min-width: 980px) and (max-width: 1199px)";
+@wide:    ~"(min-width: 1200px)";
+
+// custom media query breaks
+@break1:  ~"(max-width: 1100px)";
+@break2:  ~"(max-width: 960px)";
+//@break3:  ~"(max-width: 1100px)";
+
+// Bootstrap library.
+@import 'bootstrap.less';
+@import 'responsive.less';
+
+// Base-theme overrides.
+@import 'overrides.less';
+@import 'buttons.less';
+
+// Theme specific.
+@import 'header.less';
+@import 'type.less';
+@import 'content.less';
+@import 'footer.less';
+@import 'badges.less';
+@import 'links.less';
+@import 'contacts.less';

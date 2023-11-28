@@ -1,0 +1,40 @@
+.magenta-button, .rsagroup-layouts-magenta-button{
+	font-family:@altFontFamily;
+	color:@white;
+	background:@pink;
+	text-align:center;
+	//text-transform:uppercase;
+	text-decoration:none;
+	border-radius:@borderRadiusSmall;
+	border:1px solid #990066;
+	&:hover{
+		color:@white;
+		background:darken(@pink, 2%);
+		text-decoration:none;
+	}
+}
+
+// icon buttons
+.ic-button{
+	display:inline-block;
+	font-family:@altFontFamily;
+	padding:14px 19px 14px 50px;
+	border-radius:@baseBorderRadius;
+	border:1px solid @grayLighter;
+	text-decoration:none;
+	//text-transform:uppercase;
+	background:#f4f4f4 18px center no-repeat;
+}
+
+	.ic-button-print{
+		background-image:url('../images/ic-print.png');
+	}
+	.ic-button-email{
+		background-image:url('../images/ic-email.png');
+	}
+	.ic-button-tweet{
+		background-image:url('../images/ic-twitter.png');
+	}
+	.ic-button-linkedin{
+		background-image:url('../images/ic-linkedin.png');
+	}

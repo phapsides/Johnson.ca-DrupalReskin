@@ -1,0 +1,568 @@
+/*
+  General Content
+*/
+
+// default spacing for elements
+p, ul{margin-bottom:@marginMed;}
+
+
+// homepage override bootstrap min height on content area
+body.front .row-fluid .span12{
+//  min-height:0;
+}
+
+
+/*
+  Header blocks - menus, language selector
+*/
+
+// top lanugaue selector
+#block-locale-language{
+  ul{
+    list-style:none;
+    margin:0;
+  }
+}
+
+// top left menu
+#block-menu-block-platform-menus-utility{
+  float:left;
+}
+
+
+
+/*
+  Theme Blocks - links, breadcrumb, badges
+*/
+
+// homepage links banners / breadcrumb
+#links-wrap, #wrap-breadcrumb{
+  border-top:1px solid @grayLighter;
+  border-bottom:1px solid @grayLighter;
+  #gradient > .vertical(#f6f6f6, #fff);
+}
+  #wrap-breadcrumb{
+    min-height:0;
+  }
+
+
+
+/*
+  Sidebar theme
+*/
+  
+.sidebar{
+  // blocks
+  .block{
+    margin-bottom:60px;
+  }
+  // sidebar menus
+  .menu{
+    border-top:5px solid @pink;
+    li{
+      border-bottom:1px solid @grayLighter;
+      padding:20px 0;
+      
+      &:last-child{
+        border:0;
+      }
+      a{
+        font-size:@fontSizeLarge;
+        text-decoration:none;
+        &:hover{
+          background:none;
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*
+  General Node theming
+*/
+
+// node table style
+.node {
+  
+  table{
+    width:100%;
+    border-collapse:collapse;
+    table-layout:fixed;
+    background:#f3f3f3;
+    margin:@marginMed 0;
+    thead{
+      background:@rsapale;
+      border-bottom:2px solid @white;
+    }
+    td{
+      border-right:12px solid @white; 
+      padding:10px 5%;
+      &:last-of-type{
+        border-right:none;
+      }
+    }
+    tr{
+      border-bottom:1px solid @white;
+    }
+  }
+  
+  .field-label{
+    font-weight:normal;
+  }
+  footer{
+    font-size:@fontSizeMed;
+  }
+  
+  &.node-product-category{
+    margin-bottom:30px;
+  }
+
+  // video output 
+  .file-video{
+    margin-bottom:20px;
+  }
+}
+  
+  
+
+/*
+  Product Node theming
+*/
+
+.field-name-field-tags .field-item{
+  text-transform:capitalize;
+}
+
+// document download icon
+
+.download-pdf{
+  display:inline-block;
+  font-family:@altFontFamily;
+  background:url('../images/purple-download-icon.png') 20px center no-repeat #f4f4f4;
+  padding:14px 20px 14px 53px;
+  border-radius:@baseBorderRadius;
+  border:1px solid @grayLighter;
+  text-decoration:none;
+  //text-transform:uppercase;
+
+  margin-bottom:@marginMed;
+  &:hover{
+    background:url('../images/purple-download-icon.png') 20px center no-repeat darken(#f4f4f4, 2%);
+  }
+}
+
+// product document block
+
+.document-panel{
+  border-top:5px solid @purple;
+  padding-top:@marginMed;
+  margin-top:@marginXL;
+  clear:both;
+}
+
+
+.field-name-field-document .field-item{
+  display:inline-block;
+  background:url('../images/purple-pdf-icon.png') left top no-repeat;
+  padding:0 0 0 40px;
+  margin-bottom:@marginXL;
+  min-height:37px; // 37px is the height of the PDF icon image
+  text-decoration:none;
+  color:@grayDark;
+  width:40%;
+
+  @media @mobile{
+    width:100%;
+  }
+  
+  .file-icon{
+    display:none;
+  }
+  .file-size{
+    display:block;
+    color:@altGray;
+  }
+}
+
+span.mobile-number,
+a.mobile-number{
+  display:block;
+  margin-top:@marginMed;
+  font-size:18px; line-height:24px;
+}
+
+// product purple info boxes 
+
+.purple-panel, .rsagroup-layouts-purple-panel{
+  background:@purple;
+  margin-bottom:@marginMed;
+  padding:20px 3%;
+  width:100%-(3%*2);
+  color:@white;
+  h2{
+    width:100%;
+    color:@white;
+    padding-bottom:12px; margin-bottom:18px;
+    border-bottom:5px solid @altPurple;
+  }
+  a{color:@white;}
+}
+
+  .login-bravo, .rsagroup-layouts-login-bravo{
+    display:block;
+    font-size:22px; line-height:28px;
+    padding:16px 0;
+  }
+
+
+
+/*
+  RSAGroup Layouter Styles
+*/
+
+// primary message text
+.rsagroup-layouts-primary-message, .primary-message{
+  color:@gray;
+  font-size:28px; line-height:38px;
+  margin-bottom:@marginMed;
+}
+
+.rsagroup-layouts-boxed-content{
+  background:#f9f9f6;
+  border:1px solid @rsapale;
+  display:inline-block;
+  box-sizing:border-box;
+  padding:20px 14px;
+  margin:0 8px 8px 0;
+  color:@gray;
+  font-size:20px; line-height:26px;
+  text-align:center;
+  span{
+    display:block;
+    font-size:55px; line-height:55px;
+    margin-bottom:@marginMed;
+  }
+  p{
+    color:@textColor;
+    font-size:@baseFontSize; line-height:@baseLineHeight;
+  }
+  @media @mobile{
+    font-size:14px; line-height:20px;
+  }
+}
+
+.rsagroup-layouts-boxed-content-fixed{
+  margin-bottom:@marginMed;
+  .rsagroup-layouts-boxed-content{
+    margin-right:0; min-height:190px;
+    font-size:18px; line-height:24px;
+  }
+}
+
+.rsagroup-layouts-boxed-content-full-width{
+  .rsagroup-layouts-boxed-content{
+    width:100%;
+    padding:10px 12px;
+    text-align:left;
+    >.span3{
+      @media @mobile{
+        margin-bottom:@marginMed/2;
+      }
+    }
+  }
+}
+
+.rsagroup-layouts-large-quote{
+  font-family:@altFontFamily;
+  font-size:28px; line-height:34px;
+  //text-transform: uppercase;
+  width:78%-(2%*2);
+  margin:@marginLrg 11%;
+  padding:@marginMed 2%;
+  border-top:3px solid @altBlue;
+  border-bottom:3px solid @altBlue;
+  letter-spacing:0.025em;
+  @media @mobile{
+    margin-left:0; margin-right:0;
+    padding-left:0; padding-right:0;
+    width:100%;
+  }
+}
+
+.rsagroup-layouts-twocol-images{
+  img{
+    width:100%;
+  }
+  .span6{
+    // Space images for when the stack @mob
+    margin-bottom:@marginMed;
+  }
+}
+  
+  
+
+/*
+  Theme Teaser block display - articles, products
+*/
+
+// teaser display on category page / latest article blocks
+.box-teaser{
+  background:@boxBg;
+  border:1px solid @boxBorder;
+  margin-bottom:20px;
+  font-size:14px;
+  .teaser-content{
+    padding:10px 17px;
+    min-height:80px;
+    color:@gray;
+    //text-transform:uppercase;
+  }
+  
+  .category-title{
+    position:absolute;
+    top:-30px;
+    left:0;right:0;
+    font-size:@fontSizeLarge;
+    text-align:center;
+    //text-transform:uppercase;
+    a{
+      text-decoration:none;
+    }
+  }
+  h3{
+    margin:3px 0 0;
+  }
+  span, span a{
+    line-height:18px;
+    color:@altGray;
+    text-decoration:none;
+    display:block;
+  }
+  
+  &:nth-child(3n+1){
+    margin-left: 0;
+  }
+  
+  &.node-product{
+    h3{ margin:3px 0;}
+  }
+}
+
+  // responsive tiles
+  .node-product-category .span4.box-teaser{
+    min-height:330px;
+    @media @mobile{
+      display:inline-block;
+      float:left;
+      width:49%;
+      margin-right:2%;
+      min-height:300px;
+      &:nth-child(2n){
+        margin-right:0;
+      }
+    }
+    @media only screen and (max-width:500px){
+      width:100%;
+      clear:both;
+      max-width:406px;
+      min-height:0;
+    }
+  }
+
+
+/*
+  Articles / Think Tank
+*/
+
+// article node
+
+.node-article {
+  margin-bottom:20px;
+  
+  // article header elements
+  .article-info{
+    font-size:@fontSizeMed;
+    color:@altGray;
+    //text-transform:uppercase;
+    display:block;
+    a{
+      color:@altGray;
+      text-decoration:none;
+    }
+  }
+  
+  // article teaser heading
+  h3{
+    margin-top:5px;
+  }
+  
+  // featured first article
+  &.node-featured{
+    background:@boxBg;
+    border:1px solid @boxBorder;
+    padding-bottom:10px;
+    margin-bottom:40px;
+    
+    // teaser info
+    .field-name-field-image-thumbnail-1{
+      margin-bottom:10px;
+    }
+    h3, .article-info{
+      padding:0 17px;
+    }
+  }
+  
+  .field-name-field-tags{
+    .field-label{
+      color:#666666;
+    }
+    .field-item{
+      display:inline-block;
+      margin-right:10px;
+    }
+  }
+}
+
+// article banner header
+.node-article-header{
+  margin:30px 0 0 0;
+}
+.node-banner-wrap{
+  background:@rsapale;
+  padding:1px 0;
+}
+
+.banner-image{
+  margin-bottom:@marginXL;
+}
+
+.content-share-buttons{
+  width:100%; 
+  float:left;
+  display:block;
+  clear:both;
+  margin:0 0 @marginMed;
+  padding:0;
+  li{
+    display:block; 
+    float:left;
+    margin:0 1% @marginMed/2 0;
+    padding:0;
+  }
+  @media only screen and (max-width:500px){
+    li, li a{
+      box-sizing:border-box;
+      width:100%;
+    }
+  }
+}
+
+// extended styles for article teasers in block view (latest articles, recent articles, slider)
+.article-block-list{
+  .box-teaser{
+    padding-bottom:14px;
+    position:relative;
+    //text-transform:uppercase;
+    margin-top:20px;
+    img{
+      margin-bottom:13px;
+    }
+    h3, span{
+      padding-right:17px;padding-left:17px;
+      display:block;
+    }
+  }
+}
+
+// featured articles block on think tank
+
+.featured-articles{
+  margin-top:60px;
+  .box-teaser{
+    margin-bottom:40px;
+  }
+  
+  .span4{
+    max-width:408px;
+  }
+}
+
+// recent articles in sidebar
+.sidebar .article-block-list{
+  .box-teaser{
+    width:100%;
+    margin:0 0 10px;
+  }
+}
+
+// article sub nav
+
+#block-menu-block-platform-menus-4{
+  background:url('../images/pink-article-icon.png') no-repeat top center;
+  padding-top:50px;
+  h2{
+    text-align:center;
+    font-size:20px;
+  }
+}
+
+
+/*
+  Full width Slider (think tank)
+*/
+
+// defaults
+.overflowSlider{display:block;float:left;overflow:hidden}.overflowSlider>div{display:block;margin:0 auto;}.overflowSlider>div>ul{margin:0;padding:0}.overflowSlider>div>ul li{display:block;float:left;opacity:.35;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}.overflowSlider>div>ul li.inView{opacity:1;-webkit-transition:.4s;-moz-transition:.4s;transition:.4s}.overflowSlider>div>ul li img{display:block;float:left;width:100%;height:auto}.overflowSlider .os_next,.overflowSlider .os_prev{position:absolute;top:70px;width:50px;height:50px;background:#00f;z-index:999}.overflowSlider .os_next{right:-25px}.overflowSlider .os_prev{left:-25px;display:none}
+
+#block-views-think-tank-articles-slider{
+  position:relative;
+}
+
+// theme overrides
+.overflowSlider{
+  .os_next, .os_prev{
+    border:1px solid #3c8a92;
+    background:#6eb0b7;
+    color:@white;
+    font-size:50px;
+    font-family:@altFontFamily;
+    text-decoration:none;
+    padding:27px 0 32px 0;
+    text-align:center;
+    height:auto;
+    top:50%;
+    margin-top:-65px;      
+    width:80px;
+    right:-40px;
+  }
+  .os_prev{
+    left:-40px;
+  }
+  @media only screen and (max-width:@fluidGridMaxWidth){
+    .os_next{right:-5px;}
+    .os_prev{left:-5px;}
+  }
+}
+
+.featured-articles article{position:relative;}
+
+.overflowSlider .box-teaser{
+  margin-top:0;
+}
+
+body #feedbackify{
+  
+  @media @mobile{
+    width:100% !important;
+    left:0 !important;
+    
+    #fby-form{
+      width:100% !important;
+      max-width:100% !important;
+      left:0 !important;
+    }
+  }
+}

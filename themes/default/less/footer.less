@@ -1,0 +1,61 @@
+
+
+body {
+	.pageFooter {
+		background: @grayDark;
+		font-family: @fontRSA-med;
+		.footerLogo {
+			background: url(../images/footerLogo.png) no-repeat;
+			display: block;
+			margin: 2.1em auto 0.75em;
+			height: 65px;
+			width: 65px;
+		}
+		.navbar {
+			margin-bottom: 0.75em;
+			text-align: center;
+			.nav {
+				display: inline-block;
+				float: none;
+				li {
+					@media @mobile {
+						float: none;
+					}
+					a {
+						color: @white;
+						text-shadow: none;
+						&:active,
+					    &:visited,
+					    &:focus,
+					    &:hover {
+					    	color: @white;
+					        outline: 0;
+					        outline-style: none;
+					        outline-width: 0;
+					    } 
+					    &:hover {
+					    	text-decoration: underline;
+					    }
+					}
+					&.divider {
+						border-left: 0.2em solid #5b5b5b;
+						height: 1.75em;
+						margin: 0.6em 0;
+						@media @mobile {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		p {
+			color: @grayLight;
+			margin: 0 0 3.5em;
+			text-align: center;
+		}
+	}
+}
+
+
+
+

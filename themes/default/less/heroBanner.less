@@ -1,0 +1,221 @@
+body {
+	.hero {
+		background: #ffffff;
+		color: #ffffff;
+		.banner {
+			background: url(../images/heroBanner.jpg) no-repeat;
+			height: 342px;
+			margin: 1.75em 0;
+			padding: 2.75em 3em;
+			position: relative;
+			@media @mobile {
+				background: none;
+				height: auto;
+				margin: 0;
+				padding: 0.75em 1em;
+			}
+			.title {
+				position: relative;
+				top: 50%;
+				@media @mobile {
+					display: none;
+				}
+				h1 {
+					font-family: @fontRSA-light;
+					font-size: 3.214em;
+					font-weight: normal;
+					@media @tablet {
+						font-size: 2.714em;
+					}
+				}
+			}
+			.getQuote {
+				background-image: -webkit-gradient(
+									linear,
+									left top,
+									left bottom,
+									color-stop(0, #6F0D8A),
+									color-stop(1, #A925C0)
+								);
+				background-image: -o-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -moz-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -webkit-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -ms-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: linear-gradient(to bottom, #6F0D8A 0%, #A925C0 100%);
+				padding: 1.25em;
+				text-align: center;
+				@media @tablet {
+					margin-top: 4em;
+				}
+				h2 {
+					font-family: @fontRSA-light;
+					font-size: 2.857em;
+					font-weight: normal;
+					margin: 0;
+					@media @tablet {
+						font-size: 2.357em;
+					}
+				}
+				.call {
+					font-family: @fontRSA-reg;
+					font-size: 1.571em;
+					line-height: 1.5;
+					margin: 0.25em auto 0;
+    				width: 60%;
+    				@media @normal {
+    					width: 80%;
+    				}
+    				@media @tablet {
+    					font-size: 1.1em;
+						width: 90%;	
+					}
+					@media @mobile {
+						width: 90%;	
+					}
+				}
+				.telNo {
+					font-family: @fontRSA-light;
+					font-size: 3.429em;
+					margin: 0.5em 0;
+					@media @tablet {
+    					font-size: 2.449em;
+					}
+					@media @mobile {
+    					font-size: 2.75em;
+					}
+				}
+				.online {
+					font-family: @fontRSA-reg;
+					font-size: 1.571em;
+					margin: 2.1em auto 0.5em;
+					@media @tablet {
+    					font-size: 1.1em;
+					}
+				}
+				button {
+					background: #612c85;
+					border: none;
+					border-bottom: 0.214em solid #4b1b6e;
+					border-radius: 0;
+					box-shadow: none;
+					color: #ffffff;
+					font-family: @fontRSA-med;
+					font-size: 1.429em;
+					margin: 0.1em auto 1em;
+					padding: 0.75em 0 0.5em;
+					text-shadow: none;
+					width: 200px;
+					@media @tablet {
+    					font-size: 1em;
+					}
+				}
+			}
+		}
+	}
+	.heroProd {
+		background: #f4f4f4;
+		color: #ffffff;
+		.banner {
+			background: url(../images/heroBannerProd.jpg) no-repeat;
+			height: 342px;
+			margin: 1.75em 0;
+			padding: 2.75em 3em;
+			position: relative;
+			@media @mobile {
+				background: none;
+				height: auto;
+				margin: 0;
+				padding: 0.75em 1em;
+			}
+			.title {
+				color: #333333;
+				@media @tablet {
+					margin-top: 2.5em;
+				}
+				@media @mobile {
+					display: none;
+				}
+				h1 {
+					font-family: @fontRSA-light;
+					font-size: 2.714em;
+					font-weight: normal;
+					margin-top: 0;
+					width: 75%;
+					@media @tablet {
+						font-size: 2.1em;
+						width: 100%;
+					}
+					&.strong {
+						font-family: @fontRSA-med;
+						font-size: 3.214em;
+						line-height: 1;
+						margin-bottom: 0;
+						@media @tablet {
+							font-size: 2.6em;
+						}
+					}
+				}
+			}
+			.getQuote {
+				background-image: -webkit-gradient(
+									linear,
+									left top,
+									left bottom,
+									color-stop(0, #6F0D8A),
+									color-stop(1, #A925C0)
+								);
+				background-image: -o-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -moz-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -webkit-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: -ms-linear-gradient(bottom, #6F0D8A 0%, #A925C0 100%);
+				background-image: linear-gradient(to bottom, #6F0D8A 0%, #A925C0 100%);
+				padding: 2.5em 1.25em;
+				text-align: center;
+				h2 {
+					font-family: @fontRSA-light;
+					font-size: 2.857em;
+					font-weight: normal;
+					margin: 0 auto 1em;
+					@media @tablet {
+						font-size: 2em;
+					}
+				}
+				.icon {
+					display: block;		
+					font-size: 3.75em;			
+					margin: 0.75em auto 0;
+					position: relative;
+    				right: 0.25em;
+    				top: 0.1em;
+				}
+				.online {
+					font-family: @fontRSA-reg;
+					font-size: 1.429em;
+					line-height: 1.5;
+					margin: 1em auto;
+					width: 60%;
+					@media @normal {
+						width: 75%;
+					}
+					@media @tablet {
+						width: 100%;
+					}
+				}
+				.telNo {
+					font-family: @fontRSA-light;
+					font-size: 3.429em;
+					margin: 1.1em auto 0.5em;
+					@media @normal {
+						font-size: 2.5em;
+					}
+					@media @tablet {
+						font-size: 1.8em;
+					}
+					@media @mobile {
+						font-size: 3em;
+					}
+				}
+			}
+		}
+	}
+}

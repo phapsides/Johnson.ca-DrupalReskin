@@ -1,0 +1,152 @@
+// Styling for Contact Finder pages
+
+#block-quicktabs-contact-finder, #block-quicktabs-contact-finder-french{
+  h2.block-title{
+    display: none;
+  }
+  padding-bottom: 25px;
+}
+
+#quicktabs-contact_finder, #quicktabs-contact_finder_french{
+  ul.quicktabs-tabs{
+		margin-left: 0;
+		overflow: hidden;
+		li{
+			padding: 0;
+			float: left;
+			border-bottom: 1px solid gray;
+      width: 33%;
+      text-align: center;
+      @media @mobile{
+      float: none;
+        display: table-cell;
+      }
+			a{
+				display: block;
+				padding: 10px 30px 10px 30px;
+				color: #666666;
+				font-size: 20px;
+				background-color: #f3f2ed;
+				border-top: 5px solid #f3f2ed;
+				margin: 0 5px 0 5px;
+				text-decoration: none;
+        @media @mobile{
+          font-size: 16px;
+          padding: 10px 10px 10px 10px;
+          margin: 0 5px 0 5px;
+          white-space: normal;
+          min-height: 65px;
+        }
+			}
+			&.active{
+				border-right: 1px solid gray;
+				border-left: 1px solid gray;
+				border-bottom: none;
+				border-top: 5px solid #6eb0b7;
+				a{
+					background-color: white;
+					border-top: none;
+				}
+			}
+      &.first a{
+        margin-left: 0;
+      }
+      &.last a{
+        margin-right: 0;
+      }
+		}
+	}
+
+  input.form-autocomplete:not(.throbbing){
+    background-position-y: 10px;
+  }
+}
+
+.view-contact{
+	.views-exposed-form{
+		.views-exposed-widget{
+      @media @mobile{
+        margin-top: 15px;
+      }
+			>label{
+				text-transform: uppercase;
+				color: #6eb0b7;
+				font-size: 20px;
+				font-weight: normal;
+			}
+			float: none;
+			.form-radios{
+				display: table;
+        @media @mobile{
+          border-spacing: 0;
+        }
+				width: 100%;
+				border-spacing: 10px;
+				border-collapse: separate;
+				text-align: center;
+				.form-type-radio{
+					display: table-cell;
+					color: #5a2d7f;
+					background-color: #f9f9f6;
+					&.active{
+						color: white;
+						background-color: #5a2d7f;
+					}
+					border: 1px solid #e8e6dc;
+					label{
+						margin-bottom: 0;
+						font-weight: normal;
+						font-size: 16px;
+						padding-top: 10px;
+						padding-bottom: 10px;
+            padding-left: 0;
+						input[type="radio"]{
+							display: none;
+						}
+					}
+          @media @mobile{
+            display: block;
+            margin-bottom: 5px;
+          }
+				}
+			}
+			button.form-submit{
+				color: white;
+				background-color: #cd0084;
+				//text-transform: uppercase;
+				padding: 10px 100px 10px 100px;
+				background-image: none;
+        @media @mobile{
+          width: 100%;
+          margin-top: 0;
+        }
+			}
+		}
+		
+		
+	}
+	
+	.view-content{
+		border-top: 3px solid #d5d5d5;
+		padding-top: 20px;
+		.views-row{
+			display: inline-block;
+			width: 32%;
+			margin-bottom: 20px;
+			.views-field{
+				margin-left: 70px;
+			}
+			.views-field.views-field-field-image-thumbnail-1{
+				float: left;
+				margin-left: 0;
+				img{
+					width: 50px;
+				}
+			}
+      @media @mobile{
+        width: 100%;
+      }
+		}
+	}
+	
+}

@@ -1,0 +1,108 @@
+// Links
+
+// Horizontal Tasks Blocks
+ul.tasks-menu{
+  position:relative;
+  float:left;
+  margin:0;
+  padding:@paddingXL;
+  @media @mobile{
+    padding:20px 0;
+  }
+  > li{
+    display:block;
+    position:relative;
+    float:left;
+    width:31%;
+    margin-right:3%;
+    background:@darkPurple;
+    border:1px solid #3f195f;
+    @media @mobile{
+      width:100%;
+      margin-right:0;
+      margin-bottom:20px;
+    }
+    > a{
+      position:relative;
+      display:block;
+      padding:21px 6% 17px 6%;
+      font-family:@altFontFamily;
+      font-size:20px; line-height:20px;
+      //text-transform:uppercase;
+      text-decoration:none;
+      color:@white;
+      &:after{
+        display:block;
+        content:'';
+      	width: 0; 
+      	height: 0; 
+      	border-left: 6px solid transparent;
+      	border-right: 6px solid transparent;
+      	border-top: 6px solid @white;
+        position:absolute;
+        right:5%; top:26px;
+      }
+    }
+    > ul{
+      position:relative;
+      width:100%;
+      background:url('../images/purple-tasks-background.jpg') no-repeat left bottom @darkPurple;
+      margin:-2px 0 0 -1px;
+      padding-top:10px;
+      box-shadow:none;
+      border-radius:0;
+      border:1px solid #3f195f;
+      border-top:none;
+      
+      > li{
+        display:block;
+        width:100%;
+        margin-bottom:18px;
+        a{
+          position:relative;
+          display:block;
+          padding:0 5% 0 11%;
+          width:100%-(5%)-(11%);
+          font-family:@altFontFamily;
+          color:@white;
+          font-size:24px; line-height:30px;
+          text-decoration:none;
+          //text-transform:uppercase;
+          &:hover{
+            text-decoration:underline;
+            background:none;
+            color:@white;
+          }
+          &:before{
+            display:block;
+            content:'»';
+            position:absolute;
+            left:5%; top:-1px;
+            font-size:16px; 
+            color:@altBlue;
+          }
+        }
+      }
+    }
+    &.item2{
+      background:@altPink;
+      border-color:#a4017b;
+      > ul{
+        background:url('../images/pink-tasks-background.jpg') no-repeat right bottom @altPink;
+        border-color:#a4017b;
+      }
+    }
+    &.item3{
+      background:@altBlue;
+      border-color:#3c8a92;
+      margin-right:0;
+      > ul{
+        background:url('../images/blue-tasks-background.jpg') no-repeat right bottom @altBlue;
+        border-color:#3c8a92;
+        > li > a:before{
+          color:#bedfe2;
+        }
+      }
+    }
+  }
+}

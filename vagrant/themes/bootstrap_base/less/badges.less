@@ -1,0 +1,64 @@
+// Badges
+
+#badges-wrap{
+  border-top:1px solid @grayLighter;
+  border-bottom:1px solid @grayLighter;
+  min-height:190px;
+  background:@rsapale;
+  padding:25px 0;
+} 
+
+// single item
+.badge-item{
+  position:relative; 
+  color:@white;
+  text-align:center;
+  font-size:@fontSizeLarge;
+  
+  @media @break1{
+    font-size:@baseFontSize;
+  }
+  @media @mobile{
+    margin-bottom:20px;
+    &.item2{
+      margin-bottom:0;
+    }
+  }
+  
+  .views-field-title{
+    position:absolute;
+    top:35px;
+    left:20px;right:20px;
+    h2{
+      color:@white;
+      
+      a{
+        color:@white;
+        text-decoration:none;
+      }
+    }
+    
+    @media (max-width: 400px){
+      font-size:@baseFontSize * 1.7; // ~24.5px 
+      top:10px;
+    }
+    
+  }
+  .views-field-body{
+    position:absolute;
+    top:100px;
+    left:60px; right:60px;
+    line-height:1.3em;
+   
+    @media @tablet{
+      display:none;
+    }
+    
+    @media only screen and (max-width:565px){
+      display:none;
+    }
+    
+    
+  }
+  .views-field-field-image-1{}
+}

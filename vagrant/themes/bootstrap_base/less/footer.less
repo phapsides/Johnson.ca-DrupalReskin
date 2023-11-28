@@ -1,0 +1,95 @@
+// Insert your styling here.
+
+
+.footer{
+  background:@grayDark url('../images/footer-ico.png') center 30px no-repeat;
+  margin:0;
+  padding:115px 0 20px 0;
+  min-height:100px;
+  text-align:center;
+  font-size:14px; line-height:20px;
+  .nav{
+    margin:0;
+    margin-bottom:@marginMed;
+    li{
+      display:inline;
+      padding:0 10px;
+      position:relative;
+      margin-left:-3px;
+      &:before{
+        content:'|';
+        font-size:0;
+        background:@gray;
+        border:0;
+        width:1px;
+        position:absolute;
+        left:0px;
+        height:12px;
+        top:2px;
+      }
+      &.first:before{
+        display:none;
+      }
+    }
+    li a{
+      display:inline;
+      background:none;
+      color:@white;
+      &:hover{
+        background:none;
+        color:darken(@white, 20%);
+      }
+    }
+    @media @mobile{
+      li{
+        display:block;
+        margin-bottom:@marginMed;
+        &:before{display:none;}
+      }
+    }
+  }
+  .footer-broker-icon{
+    background:@grayDark url('../images/footer_broker_logo.png') center bottom no-repeat;
+    padding-bottom:50px;
+  }
+}
+
+  #boxes-box-copyright_note{
+    float:left;
+    margin-bottom:@marginMed/2;
+    p{
+      color:@altGray;
+      margin-bottom:@marginMed/1.5;
+    }
+    @media @mobile{
+      width:100%;
+     p{max-width:300px; margin:0 auto @marginMed/1.5;}
+    }
+  }
+
+  footer > .container-fluid > ul{
+    li{
+      position:relative;
+      display:inline;
+      margin-left:-3px;
+      &:first-child{
+        margin-right:5px; 
+        padding-right:5px;
+        border-right:2px solid #848484;
+        margin-left:0;
+        &:before{
+          display:none;
+        }
+      }
+    }
+    @media @mobile{
+      margin-top:@marginMed;
+      li{
+        display:block;
+        margin:0 0 @marginMed;
+        &:first-child{
+          border-right:none;
+        }
+      }
+    }
+  }
